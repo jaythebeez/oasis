@@ -10,7 +10,7 @@ const View:React.FC<Props> = ({forms}) => {
 
     useEffect(()=>{
         console.log(forms);
-    },[])
+    },[forms])
 
   return (
     <div>
