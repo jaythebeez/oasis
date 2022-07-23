@@ -66,15 +66,15 @@ const Add:React.FC<Props> = ({forms,setForms}) => {
             <div>
                 <div>
                     <div className="form-container" id="">
-                        <label htmlFor="dropdown-label">Add field</label>
-                        <select onChange={handleSelect}>
-                            <option value={"Dropdown"}>Dropdown</option>
-                            <option value={"Checkbox"}>Checkbox</option>
+                        <label htmlFor="dropdown-label" className="form-header">Add field</label>
+                        <select onChange={handleSelect} className="form-control">
+                            <option value={"Dropdown"}  >Dropdown</option>
+                            <option value={"Checkbox"} >Checkbox</option>
                         </select>
-                        <input type="text" id="dropdown-label" placeholder="Add label" value={drop_label} onChange={handleLabel}/>
+                        <input type="text" id="dropdown-label" className="form-control" placeholder="Add label" value={drop_label} onChange={handleLabel}/>
                         <>
                             {options.map((option,i)=>(
-                                <input key={i} type="text" placeholder="Add-option" onChange={(e)=>editOptions(e,i)} value={option.value} />
+                                <input key={i} type="text" placeholder="Add-option" onChange={(e)=>editOptions(e,i)} value={option.value} className="form-control" />
                             ))}
                         </>
                         <div className="btn-container">

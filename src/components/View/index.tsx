@@ -20,7 +20,7 @@ const View:React.FC<Props> = ({forms}) => {
                     {form.type === "Dropdown" && (
                         <div key={i}>
                         <h2>{form.label}</h2>
-                        <select name="" id="">
+                        <select className='form-control' name="" id="">
                             {form.options.map(option=>(
                             <option>{option.value}</option> 
                             ))}
